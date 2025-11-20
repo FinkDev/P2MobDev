@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "P2Apps",
+    "slug": "p2apps",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/app.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/app.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/app.png",
+        "backgroundColor": "#c0f4bfff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.Fink.p2apps"
+    },
+    "web": {
+      "favicon": "./assets/images/app.png"
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "35042592-f938-4f0c-ae28-248bfb1520f5"
+      }
+    }
+  }
+}
