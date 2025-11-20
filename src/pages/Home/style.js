@@ -113,4 +113,24 @@ export default StyleSheet.create({
     fontWeight: "600",
     color: "#333",
   },
+
+  button: {
+    backgroundColor: "#fff",
+    width: "60%",
+    paddingVertical: 10,
+    borderRadius: 14,
+    alignItems: "center",
+    marginBottom: 20,
+    marginHorizontal: "auto",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+  },
+
+  buttonText: {
+    color: "#9358af",
+    fontSize: 15,
+    fontWeight: "600",
+  },
 });

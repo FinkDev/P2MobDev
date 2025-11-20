@@ -15,7 +15,6 @@ import {
 
 import Fontisto from "@expo/vector-icons/Fontisto";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { images } from "../../util/global_values";
 import style from "./style";
 
 import { getLoggedUser, getUserTasks, saveUserTasks } from "../../util/db";
@@ -30,7 +29,6 @@ export default function ToDoList({ navigation }) {
 
   const { width, height } = useWindowDimensions();
 
-  // Carregar animações iniciais
   useEffect(() => {
     Animated.parallel([
       Animated.timing(fadeAnim, {
@@ -46,7 +44,6 @@ export default function ToDoList({ navigation }) {
     ]).start();
   }, []);
 
-  // Carregar usuário + tarefas do AsyncStorage
   useEffect(() => {
     async function loadAll() {
       const user = await getLoggedUser();
@@ -56,7 +53,6 @@ export default function ToDoList({ navigation }) {
 
       const stored = await getUserTasks(user.id);
 
-      // Criar animações pros itens salvos também
       const animatedTasks = stored.map((item) => ({
         ...item,
         animated: {
@@ -71,7 +67,6 @@ export default function ToDoList({ navigation }) {
     loadAll();
   }, []);
 
-  // Salvar sempre que tasks mudar
   useEffect(() => {
     if (userId !== null) {
       const simpleTasks = tasks.map((t) => ({
@@ -167,7 +162,7 @@ export default function ToDoList({ navigation }) {
           <Text style={style.title}>Lista de Tarefas</Text>
 
           <Image
-            source={images.home_todolist}
+            source={require("../../../assets/images/todolist.png")}
             style={[style.heroImage, { width: width * 0.45 }]}
             resizeMode="contain"
           />

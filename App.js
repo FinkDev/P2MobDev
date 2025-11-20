@@ -8,13 +8,14 @@ const Stack = createNativeStackNavigator();
 // Pages
 import Home from './src/pages/Home';
 import Profile from './src/pages/Profile';
+import About from './src/pages/About';
 import Signin from './src/pages/Signin';
 import Login from './src/pages/Login';
 import Phrases from './src/pages/Phrases';
 import IMC from './src/pages/IMC';
 import Temperature from './src/pages/Temperature';
 import ToDoList from './src/pages/ToDoList';
-
+console.log("About:", About);
 export default function App() {
   return (
     <NavigationContainer>
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="Signin" component={Signin} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+        <Stack.Screen name="About" component={About} options={{ headerShown: false }} />
 
         <Stack.Screen
           name="Phrases"

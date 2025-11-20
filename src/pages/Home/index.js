@@ -136,6 +136,15 @@ export default function Home({ navigation }) {
             </Text>
           </Animated.View>
         </ScrollView>
+        <Pressable
+          style={({ pressed }) => [
+            style.button,
+            pressed && { transform: [{ scale: 0.97 }] },
+          ]}
+          onPress={() => navigation.navigate("About")}
+        >
+          <Text style={style.buttonText}>Sobre o app</Text>
+        </Pressable>
       </View>
     </ImageBackground>
   );

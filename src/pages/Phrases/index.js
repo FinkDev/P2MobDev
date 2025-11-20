@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import style from "./style";
 import rangePicker from "./util/rangePicker";
-import { images } from "../../util/global_values";
 
 export default function Phrases({ navigation }) {
   const { width } = useWindowDimensions();
@@ -75,10 +74,10 @@ export default function Phrases({ navigation }) {
             { opacity: fadeAnim, transform: [{ translateY: slideAnim }] },
           ]}
         >
-          <Text style={style.title}>Frases Aleatórias</Text>
+          <Text style={style.title}>Frases e Reflexões</Text>
 
           <Image
-            source={images["home_phrases"]}
+            source={require("../../../assets/images/phrases.png")}
             style={[style.heroImage, { width: width * 0.55 }]}
             resizeMode="contain"
           />
