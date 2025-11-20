@@ -54,7 +54,10 @@ export default function About({ navigation }) {
           </Pressable>
         </View>
 
-        <ScrollView contentContainerStyle={style.scrollContainer}>
+        <ScrollView
+          contentContainerStyle={style.scrollContainer}
+          scrollEnabled={false}
+        >
           <Animated.View
             style={[
               style.container,
@@ -91,7 +94,19 @@ export default function About({ navigation }) {
 
             <Text style={style.title}>Pedro Fink</Text>
 
-            <Text style={[style.title, { fontSize: 16, fontWeight: "600", opacity: 0.7, marginTop: -2 }]}>@FinkDev</Text>
+            <Text
+              style={[
+                style.title,
+                {
+                  fontSize: 16,
+                  fontWeight: "600",
+                  opacity: 0.7,
+                  marginTop: -2,
+                },
+              ]}
+            >
+              @FinkDev
+            </Text>
 
             <View style={style.socialContainer}>
               <Pressable onPress={() => openLink("https://github.com/FinkDev")}>
@@ -105,7 +120,9 @@ export default function About({ navigation }) {
               </Pressable>
 
               <Pressable
-                onPress={() => openLink("https://www.linkedin.com/in/pedro-fink-037116350")}
+                onPress={() =>
+                  openLink("https://www.linkedin.com/in/pedro-fink-037116350")
+                }
               >
                 <FontAwesome name="linkedin-square" size={40} color="#fff" />
               </Pressable>
@@ -114,22 +131,23 @@ export default function About({ navigation }) {
             <View style={style.aboutCard}>
               <ScrollView style={{ maxHeight: 300 }}>
                 <Text style={style.aboutText}>
-                  {"   "}Este aplicativo foi desenvolvido como parte da 2º Avaliação de
-                  Desenvolvimento para Dispositivos Móveis do curso de
-                  Desenvolvimento de Software Multiplataforma da Fatec Itaquera.
+                  {"   "}Este aplicativo foi desenvolvido como parte da 2º
+                  Avaliação de Desenvolvimento para Dispositivos Móveis do curso
+                  de Desenvolvimento de Software Multiplataforma da Fatec
+                  Itaquera.
                   {"\n"}
                   {"\n"}
                   {"   "}A proposta principal foi criar uma aplicação mobile
                   completa, funcional e organizada, demonstrando na prática os
                   conhecimentos adquiridos ao longo do semestre.
                   {"\n"}
-                  {"   "}Construído utilizando o ecossistema React Native com o Expo, o
-                  projeto busca oferecer uma experiência fluida e moderna em
-                  dispositivos Android e iOS.
+                  {"   "}Construído utilizando o ecossistema React Native com o
+                  Expo, o projeto busca oferecer uma experiência fluida e
+                  moderna em dispositivos Android e iOS.
                   {"\n"}
                   {"\n"}
-                  {"   "}Ao longo do desenvolvimento, foram aplicados conceitos de
-                  navegação entre telas, gerenciamento de login e sessão,
+                  {"   "}Ao longo do desenvolvimento, foram aplicados conceitos
+                  de navegação entre telas, gerenciamento de login e sessão,
                   validação de dados, autenticação de usuários e criação de
                   interfaces responsivas, tudo pensado para tornar o uso simples
                   e intuitivo.
