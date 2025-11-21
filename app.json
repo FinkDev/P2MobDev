@@ -13,7 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.Fink.p2apps",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -31,8 +35,15 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "35042592-f938-4f0c-ae28-248bfb1520f5"
+        "projectId": "5f8dc83d-1c1d-4728-86f7-1fd173584051"
       }
+    },
+    "owner": "finkdev",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/5f8dc83d-1c1d-4728-86f7-1fd173584051"
     }
   }
 }
